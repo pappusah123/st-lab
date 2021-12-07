@@ -1,0 +1,72 @@
+package atm203;
+import java.util.Scanner;
+
+public class atm203 {
+	
+	public static void main(String arg[]) {
+		int i=0, dpin=8123,ipin;
+		Scanner s=new Scanner(System.in);
+		do {
+			System.out.println("Please enter pin:");
+			ipin=s.nextInt();
+			if(ipin==dpin) {
+				menu();
+			}
+			else {
+				System.out.println("Wrong pin");
+				i++;
+			}
+		}while(i<3);
+	}
+	static void menu() {
+		int j=0,amt=6000;
+		do {
+			System.out.println("1. Deposit");
+			System.out.println("2. Withdraw");
+			System.out.println("3. Balance");
+			System.out.println("4. Exit");
+			Scanner choi=new Scanner(System.in);
+			int c=choi.nextInt();
+			
+			switch(c) {
+			case 1:
+				System.out.println("Enter the amount you want to deposit:");
+				Scanner d=new Scanner(System.in);
+				int dep=d.nextInt();
+				if(dep%500==0) {
+				amt+=dep;
+				System.out.println("Deposited");
+				}
+				else {
+					System.out.println("Enter in terms of 500");
+				}
+				
+				break;
+			case 2:
+				System.out.println("Enter the amount you want to withdraw:");
+				Scanner w=new Scanner(System.in);
+				int wd=w.nextInt();
+				if(wd%500==0) {
+				if(wd>amt) {
+					System.out.println("Balance insufficient.");
+					break;
+				}
+				else {
+					amt=amt-wd;
+				} }
+				else {
+					System.out.println("Enter in terms of 500");
+				}
+				break;
+			case 3:
+				System.out.println("Balance is:"+amt);
+				break;
+			case 4:
+				System.exit(0);
+			default:
+				System.out.println("Please enter correct value.");
+			}
+		}while(true);
+	}	
+
+}

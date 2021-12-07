@@ -1,0 +1,130 @@
+package stlab203;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import stlab203.Tri2;
+
+public class tritest {
+
+	@Test
+	public void test1() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(100,100,1),"Isosceles");
+	}
+	                                                            
+	@Test
+	public void test2() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(100,100,2),"Isosceles");
+	}
+	
+	@Test
+	public void test3() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(100,100,100),"Equilateral");
+	}
+	
+	@Test
+	public void test4() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(100,100,200),"Not a triangle");
+	}
+	
+	@Test
+	public void test5() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(100,100,199),"Isosceles");
+	}
+	
+	@Test
+	public void test6() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(100,1,100),"Isosceles");
+	}
+	
+	@Test
+	public void test7() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(100,2,100),"Isosceles");
+	}
+	
+	@Test
+	public void test8() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(100,200,100),"Not a triangle");
+	}
+	
+	@Test
+	public void test9() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(100,199,100),"Isosceles");
+	}
+	
+	@Test
+	public void test10() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(1,100,100),"Isosceles");
+	}
+	
+	@Test
+	public void test11() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(2,100,100),"Isosceles");
+	}
+	
+	@Test
+	public void test12() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(200,100,100),"Not a triangle");
+	}
+	
+	@Test
+	public void test13() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(199,100,100),"Isosceles");
+	}
+	
+	@Test
+	public void test14() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(3,5,7),"Scalene");
+	}
+	
+	@Test
+	public void test15() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(0,0,0),"Invalid a, b, c");
+	}
+	
+	@Test
+	public void test16() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(-1,-1,7),"Invalid a, b");
+	}
+	
+	@Test
+	public void test17() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(5,-1,-1),"Invalid b, c");
+	}
+	
+	@Test
+	public void test18() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(5,201,201),"Invalid b, c");
+	}
+	
+	@Test
+	public void test19() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(201,201,7),"Invalid a, b");
+	}
+	
+	
+	
+	
+	
+	
+}

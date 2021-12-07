@@ -1,0 +1,30 @@
+package stlab203;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class triequisr {
+
+	@Test
+	public void test1() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(0,0,100),"Invalid a, b");
+	}
+	
+	@Test
+	public void test2() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(100,201,201),"Invalid b, c");
+	}
+	
+	@Test
+	public void test3() {
+		Tri2 t=new Tri2();
+		assertEquals(t.check(0,0,0),"Invalid a, b, c");
+	}
+	
+	
+	   
+
+}

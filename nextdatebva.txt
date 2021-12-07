@@ -1,0 +1,92 @@
+package stlab203;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class nextnormalbva {
+
+	@Test
+	public void test1() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,6,1812),"Next date: 16-6-1812");
+	}
+	
+	@Test
+	public void test2() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,6,1813),"Next date: 16-6-1813");
+	}
+	
+	@Test
+	public void test3() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,6,1912),"Next date: 16-6-1912");
+	}
+	
+	@Test
+	public void test4() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,6,2011),"Next date: 16-6-2011");
+	}
+	
+	@Test
+	public void test5() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,6,2012),"Next date: 16-6-2012");
+	}
+	
+	@Test
+	public void test6() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,1,1912),"Next date: 16-1-1912");
+	}
+	
+	@Test
+	public void test7() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,2,1912),"Next date: 16-2-1912");
+	}
+	
+	@Test
+	public void test8() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,11,1912),"Next date: 16-11-1912");
+	}
+	
+	@Test
+	public void test9() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,12,1912),"Next date: 16-12-1912");
+	}
+	
+	@Test
+	public void test10() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(1,6,1912),"Next date: 2-6-1912");
+	}
+	
+	@Test
+	public void test11() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(2,6,1912),"Next date: 3-6-1912");
+	}
+	
+	@Test
+	public void test12() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(29,6,1912),"Next date: 30-6-1912");
+	}
+	
+	@Test
+	public void test13() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(30,6,1912),"Next date: 1-7-1912");
+	}
+
+
+
+
+
+
+}

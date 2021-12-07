@@ -1,0 +1,39 @@
+package stlab203;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class nextdaterobust {
+
+	@Test
+	public void test1() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(-1,6,1812),"Invalid day.");
+	}
+	
+	@Test
+	public void test2() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,-1,1812),"Invalid month.");
+	}
+	
+	@Test
+	public void test3() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,6,1811),"Invalid year.");
+	}
+	
+	@Test
+	public void test4() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(31,6,1812),"Invalid");
+	}
+	
+	@Test
+	public void test5() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,6,2013),"Invalid year.");
+	}
+
+}

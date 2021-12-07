@@ -1,0 +1,117 @@
+package stlab203;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class alltest {
+
+	@Test
+	public void test1() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(-1,6,1812),"Invalid day.");
+	}
+	
+	@Test
+	public void test2() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,-1,1812),"Invalid month.");
+	}
+	
+	@Test
+	public void test3() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,6,1811),"Invalid year.");
+	}
+	
+	@Test
+	public void test4() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(31,6,1812),"Invalid");
+	}
+	
+	@Test
+	public void test5() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,6,2013),"Invalid year.");
+	}
+	
+	@Test
+	public void test6() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(-1,-1,1811),"Invalid day, month, year.");
+	}
+	
+	@Test
+	public void test7() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,-1,1811),"Invalid month, year.");
+	}
+	
+	@Test
+	public void test8() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(-1,-1,1912),"Invalid day, month.");
+	}
+	
+	@Test
+	public void test9() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(-1,6,1811),"Invalid day, year.");
+	}
+	
+	@Test
+	public void test10() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(31,12,1912),"Next date: 1-1-1913");
+	}
+	
+	@Test
+	public void test11() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(30,6,1912),"Next date: 1-7-1912");
+	}
+	
+	@Test
+	public void test12() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,6,1912),"Next date: 16-6-1912");
+	}
+	
+	@Test
+	public void test13() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(2,1,1912),"Next date: 3-1-1912");
+	}
+	
+	@Test
+	public void test14() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(31,3,1912),"Next date: 1-4-1912");
+	}
+	
+	@Test
+	public void test15() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(15,1,1912),"Next date: 16-1-1912");
+	}
+	
+	@Test
+	public void test16() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(1,2,1912),"Next date: 2-2-1912");
+	}
+	
+	@Test
+	public void test17() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(28,2,2000),"Next date: 29-2-2000");
+	}
+	
+	@Test
+	public void test18() {
+		nextdate n=new nextdate();
+		assertEquals(n.check(28,2,2004),"Next date: 29-2-2004");
+	}
+	
+}
